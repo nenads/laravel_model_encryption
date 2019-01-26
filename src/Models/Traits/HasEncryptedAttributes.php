@@ -189,7 +189,7 @@ trait HasEncryptedAttributes
      */
     private function getHash($originalValue)
     {
-        return hash_hmac($this->hashAlg, (string)$originalValue, env('APP_KEY'));
+        return hash_hmac($this->hashAlg, (string)$originalValue, config('app.key'));
     }
 
 
